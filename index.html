@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scholarship Monitoring System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="login" class="hide">
+  <section class="panel">
+    <h2>Scholarship Monitoring – Sign in</h2>
+    <form id="loginForm" class="grid" style="grid-template-columns:1fr">
+      <label>Email<input type="email" id="email" required></label>
+      <label>Password<input type="password" id="password" required minlength="6"></label>
+      <button class="btn" type="submit">Sign in</button>
+      <button class="btn alt" type="button" id="signup">Create account</button>
+    </form>
+  </section>
+</div>
+
+<div id="appShell" class="hide">
+  <header>
+    <h1>Scholarship Monitoring and Compliance</h1>
+    <nav id="nav">
+      <button data-v="dashboard">Dashboard</button>
+      <button data-v="scholars">Scholars</button>
+      <button data-v="programs">Programs</button>
+      <button data-v="submissions">Grade submissions</button>
+    </nav>
+    <span id="who"></span>
+    <button class="btn alt sm" id="logout">Log out</button>
+  </header>
+  <main id="view"></main>
+</div>
+<div id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
